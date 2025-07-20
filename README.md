@@ -5,3 +5,5 @@
   Run without arguments but change variables **WIREGUARD_DIRECTORY** and **WIREGUARD_CONFIG** in USER SETTING block  
  ## requrements:
   ip jq sudo dhclient awk grep cut xargs timeout ping nping wg-quick curl systemctl systemd-resolved dhclient 
+## warning
+if system have more than one NIC with internet script choose NIC for WG randomly or you can type NIC name there: ```NIC=$(ls -l /sys/class/net/ | grep devices | grep -v virtual | awk -F "/" '{print $NF}')``` -> ```NIC=eth0```
